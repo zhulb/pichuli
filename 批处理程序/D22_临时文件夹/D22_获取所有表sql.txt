@@ -1,0 +1,55 @@
+
+'TABLE'||TABLE_NAME                                                             
+------------------------------------                                            
+table DUTY_ACTIVE_MANAGE                                                        
+table DUTY_ACTIVE_PLAN                                                          
+table DUTY_ACTIVE_TYPE                                                          
+table DUTY_CREATEDUTY                                                           
+table DUTY_DAYAFFIARS                                                           
+table DUTY_DUTYMAN                                                              
+table DUTY_GROUPCLASSIFY                                                        
+table DUTY_JURISDICTION                                                         
+table DUTY_LEAD_EGRESS                                                          
+table DUTY_LEAD_PARTICIPANT                                                     
+table DUTY_LEAD_SHUTTLE                                                         
+
+'TABLE'||TABLE_NAME                                                             
+------------------------------------                                            
+table DUTY_LOGNEATEN                                                            
+table DUTY_MANYOUT                                                              
+table DUTY_MEETTING_MANAGE                                                      
+table DUTY_MEETTING_TYPE                                                        
+table DUTY_MENBER                                                               
+table DUTY_MENU                                                                 
+table DUTY_MODULE                                                               
+table DUTY_MORENZHI                                                             
+table DUTY_ONEWEEKWORK                                                          
+table DUTY_ORG                                                                  
+table DUTY_PLAN                                                                 
+
+'TABLE'||TABLE_NAME                                                             
+------------------------------------                                            
+table DUTY_PLAN_MANAGE                                                          
+table DUTY_PLAN_PERSON                                                          
+table DUTY_PLAN_TREE                                                            
+table DUTY_PLAN_TYPE                                                            
+table DUTY_REGION                                                               
+table DUTY_SEQUENCE                                                             
+table DUTY_SHUJISHIZHANGPEIZHI                                                  
+table DUTY_TELRECORD                                                            
+table DUTY_TELSEND                                                              
+table DUTY_THEME                                                                
+table DUTY_WAICHUBAOGAO                                                         
+
+'TABLE'||TABLE_NAME                                                             
+------------------------------------                                            
+table DUTY_ZHONGYANGLINGDAOPISHI                                                
+table DUTY_MODIFYUSER                                                           
+table DUTY_TONGJI                                                               
+table DUTY_PAIBANJILU                                                           
+table DBTEST                                                                    
+table APP_FILE                                                                  
+table DB_TEST                                                                   
+
+ÒÑÑ¡Ôñ40ÐÐ¡£
+

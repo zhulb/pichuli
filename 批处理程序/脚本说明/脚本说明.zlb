@@ -1,0 +1,99 @@
+1 "C:\Users\u\Desktop\批处理程序\cmd窗口.bat"
+2 "C:\Users\u\Desktop\批处理程序\删除压缩文件.bat"
+3 "C:\Users\u\Desktop\批处理程序\压缩1.bat"
+4 "C:\Users\u\Desktop\批处理程序\压缩2.bat"
+5 "C:\Users\u\Desktop\批处理程序\压缩3.bat"
+压缩文件夹内所有指定类型的文件
+6 "C:\Users\u\Desktop\批处理程序\去除空行.bat"
+7 "C:\Users\u\Desktop\批处理程序\将TXT转换为网页文档.bat"
+8 "C:\Users\u\Desktop\批处理程序\常用网站.bat"
+9 "C:\Users\u\Desktop\批处理程序\文件夹生成.bat"
+10 "C:\Users\u\Desktop\批处理程序\显示变量值.bat"
+11 "C:\Users\u\Desktop\批处理程序\显示路径.bat"
+12 "C:\Users\u\Desktop\批处理程序\查找指定格式的文件.bat"
+13 "C:\Users\u\Desktop\批处理程序\添加空行1.bat"
+14 "C:\Users\u\Desktop\批处理程序\添加空行2.bat"
+15 "C:\Users\u\Desktop\批处理程序\生成空白批处理.bat"
+16 "C:\Users\u\Desktop\批处理程序\笔记转为htm文件.bat"
+17 "C:\Users\u\Desktop\批处理程序\解压1.bat"
+18 "C:\Users\u\Desktop\批处理程序\解压2.bat"
+19 "C:\Users\u\Desktop\批处理程序\判断拉入目录是否为驱动器\判断拉入目录是否为驱动器.bat"
+set /p pathly=
+当拖驱动器如G盘到批处理时，变量值为G:\；当拖文件夹如'G:\新建文件夹'到批处理时,变量值为G:\新建文件夹；前面的末尾有'\'，而后面的没有。
+result=qdq表示pathly末尾为'\'，否则末尾不是'\'
+20 "C:\Users\u\Desktop\批处理程序\判断路径是文件还是文件夹\判断路径是文件还是文件夹.bat"
+21 "C:\Users\u\Desktop\批处理程序\压缩\压缩文件.bat"
+22 "C:\Users\u\Desktop\批处理程序\压缩\压缩文件夹.bat"
+23 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理.bat"
+对变量pathly进行处理,处理后使得代码echo,%pathly%能够显示pathly原来的值,故也可以用set pathly=%pathly%来使变量复原.
+24 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理2.bat"
+对变量pathly进行处理,处理后使得代码echo,%pathly%能够显示pathly原来的值(去除引号)
+25 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理3.bat"
+对变量pathly进行处理,处理后使得代码echo,%pathly%能够显示pathly原来的值(并且两边加上两个引号)
+26 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理4.bat"
+对变量pathly进行处理,处理后使得代码echo,%pathly%能够显示pathly原来的值(去除原来的引号并且在两边加上两个引号)
+27 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理5.bat"
+将变量pathly中的特殊字符用对应标记替换,去除引号
+28 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理6.bat"
+将变量pathly中的标记换回原来的特殊字符,对应于'变量处理5.bat'
+29 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理7.bat"
+处理变量,变量名为参数%3的值，变量名不能为str；变量中的特殊字符换成其对应的标记符
+30 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理8.bat"
+处理变量，变量名为参数%3的值，变量名不能为str；处理后，echo,%变量名%能显示该变量的值；set 变量名=%变量名%便能还原该变量
+31 "C:\Users\u\Desktop\批处理程序\变量处理\变量处理9.bat"
+处理变量,变量名为参数%3的值，变量名不能为str；变量中的特殊字符换成其对应的标记符(去除引号)
+32 "C:\Users\u\Desktop\批处理程序\变量处理\新建文本文档.bat"
+33 "C:\Users\u\Desktop\批处理程序\将变量按字符拆分\将变量按字符拆分.bat"
+将变量pathly以变量change为分隔符分隔,分隔结果放在c.txt中
+变量pathly和change必须不包含特殊字符
+34 "C:\Users\u\Desktop\批处理程序\批处理笔记\功能\生成新文件.bat"
+35 "C:\Users\u\Desktop\批处理程序\批处理笔记\功能\生成空白批处理.bat"
+36 "C:\Users\u\Desktop\批处理程序\批处理笔记\功能\空白批处理.bat"
+37 "C:\Users\u\Desktop\批处理程序\批处理笔记\命令\生成新文件.bat"
+38 "C:\Users\u\Desktop\批处理程序\批处理笔记\命令\生成空白批处理 - 副本.bat"
+39 "C:\Users\u\Desktop\批处理程序\批处理笔记\命令\生成空白批处理.bat"
+40 "C:\Users\u\Desktop\批处理程序\批处理笔记\命令\空白批处理.bat"
+41 "C:\Users\u\Desktop\批处理程序\模板\被调用模板.bat"
+若%2为空则为非法引用，自动退出
+若%2为1则打印message的内容
+42 "C:\Users\u\Desktop\批处理程序\模板\调用模板.bat"
+43 "C:\Users\u\Desktop\批处理程序\脚本说明\脚本说明.bat"
+44 "C:\Users\u\Desktop\批处理程序\脚本说明\判断路径是文件还是文件夹\判断路径是文件还是文件夹.bat"
+45 "C:\Users\u\Desktop\批处理程序\脚本说明\路径处理\获取路径.bat"
+输出变量%pathly%、%pathmb%、%name%、%type%
+含有特殊字符时，"%pathly%"才能正确调用其值
+pathmb以\结尾
+46 "C:\Users\u\Desktop\批处理程序\脚本说明\路径处理\获取路径2.bat"
+输出变量%pathly%、%pathmb%、%name%、%type%
+含有特殊字符时，"%pathly%"才能正确调用其值
+pathmb以\结尾
+47 "C:\Users\u\Desktop\批处理程序\脚本说明\路径处理\路径处理.bat"
+对变量pathly进行处理
+输出变量%pathly%、%pathmb%、%name%、%type%
+含有特殊字符时，"%pathly%"才能正确调用其值
+pathmb以\结尾
+48 "C:\Users\u\Desktop\批处理程序\脚本说明\路径处理\路径处理2.bat"
+对变量pathly进行处理
+输出变量%pathly%、%pathmb%、%name%、%type%
+%pathly%就能调用其值
+pathmb以\结尾
+49 "C:\Users\u\Desktop\批处理程序\解压\解压压缩文件.bat"
+50 "C:\Users\u\Desktop\批处理程序\解压\解压压缩文件2.bat"
+51 "C:\Users\u\Desktop\批处理程序\路径处理\获取路径.bat"
+输出变量%pathly%、%pathmb%、%name%、%type%
+含有特殊字符时，"%pathly%"才能正确调用其值
+pathmb以\结尾
+52 "C:\Users\u\Desktop\批处理程序\路径处理\获取路径2.bat"
+输出变量%pathly%、%pathmb%、%name%、%type%
+含有特殊字符时，"%pathly%"才能正确调用其值
+pathmb以\结尾
+53 "C:\Users\u\Desktop\批处理程序\路径处理\路径处理.bat"
+对变量pathly进行处理
+输出变量%pathly%、%pathmb%、%name%、%type%
+含有特殊字符时，"%pathly%"才能正确调用其值
+pathmb以\结尾
+54 "C:\Users\u\Desktop\批处理程序\路径处理\路径处理2.bat"
+对变量pathly进行处理
+输出变量%pathly%、%pathmb%、%name%、%type%
+%pathly%就能调用其值
+pathmb以\结尾

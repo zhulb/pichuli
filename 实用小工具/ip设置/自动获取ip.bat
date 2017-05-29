@@ -1,0 +1,9 @@
+@echo off
+echo   设置开始自动IP，请稍等....
+echo.
+echo   正在自动获取IP地址....
+netsh interface ip set address name = "本地连接" source = dhcp
+echo   正在自动获取DNS ,请稍等......
+netsh interface ip set dns "本地连接" source = dhcp 
+echo   设置完成! 
+pause

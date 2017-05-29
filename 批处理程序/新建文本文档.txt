@@ -1,0 +1,8 @@
+core_page_configure
+
+OSGI---组件式开发
+
+
+“表单设计器”不应该只能配置html，应该也能配置div textarea ...，并且可以配置的div、textarea、input应该可以用于“组装”新的
+页面
+

@@ -1,0 +1,295 @@
+rem -------------------------------html
+1 a标签去除下划线
+	text-decoration:none 无下划线
+	text-decoration:underline 有下划线
+
+2 输出消息框
+	top.lwin.alert('消息',xxxx,'info');
+	或者
+	top.$.messager.alert('消息',xxxx,'info');
+
+	换行操作
+	top.lwin.alert('消息',xxxx</br>xxxx,'info');
+
+3 duty数据库结构
+	领导人员表：duty_lead_participant
+
+4 js对象转为JSON字符串
+	JSON.stringify(obj)
+	用这个也可以显示一个对象的所有属性值
+
+	注意：依赖json.js文件
+
+5 页面加载完执行js
+	1）$(function(){})
+	2）<body onload="...">
+	3）window.onload=...  当有FrameSet时(FrameSet和body不能同时)
+
+6 js中startWith和endWith方法
+	添加代码
+	String.prototype.startWith=function(str){     
+	  var reg=new RegExp("^"+str);     
+	  return reg.test(this);        
+	}  
+	 
+	String.prototype.endWith=function(str){     
+	  var reg=new RegExp(str+"$");     
+	  return reg.test(this);        
+	}
+
+7 display取值
+	none:隐藏
+	block:显示
+	table:
+8 div自动换行样式
+	WORD-BREAK: break-all;word-wrap:break-word;
+
+9 js对象、数组显示工具
+		//js对象显示工具---转换为json字符串
+		//和JSON.stringify()方法的区别：保留了中文，而JSON.stringify()方法会将中文转换为\uxxx的形式
+		//
+		//参数:
+		//obj:js对象或者数组
+		//shengdu:不用赋值，用于避免“无限”递归
+		//
+		//返回值：json数据(有转意双引号)
+		//
+		//注意：可以利用返回的json数据直接定义js对象
+		//如：
+		//var a=eval('('+j8_showobj(cwhdlist)+')');
+		////或者eval("var a="+j8_showobj(cwhdlist)+";");
+		//alert(a[0].end_date);
+		function j8_showobj(obj,shengdu){
+			shengdu=typeof(shengdu)=='undefined'?1:shengdu;
+			var num=0;
+			if(shengdu>5)return "";
+			var msg='';
+			//判断对象是否为数组
+			var isarray=isArray(obj);
+			//获取数组字符串
+			var arrstring='';
+			if(isarray){
+				try{//有些对象也有length属性
+					if(obj.length>0){
+						var type=typeof(obj[0]);
+						if(type=='string'||type=='number'||type=='boolean'||type=='undefined'){
+							arrstring+="\""+obj[0]+"\"";
+						}else{
+							arrstring+="{"+j8_showobj(obj[0],shengdu+1)+"}\n\n";
+						}
+					}
+					for(var i=1;i<obj.length;i++){
+						if(i>100){//最多显示一个数组的100个元素
+							break;
+						}
+						var type=typeof(obj[i]);
+						if(type=='string'||type=='number'||type=='boolean'||type=='undefined'){
+							arrstring+=",\""+obj[i]+"\"";
+						}else{
+							arrstring+=",{"+j8_showobj(obj[i],shengdu+1)+"}\n\n";
+						}
+					}
+				}catch(e){
+					isarray=false;
+				}
+			}
+			//不是数组时获取对象字符串
+			var objstring='';
+			if(!isarray){
+				for(var name in obj){
+					if(num++>100){//最多显示一个对象的100个属性
+						break;
+					}
+					try{
+						var flag=(typeof(eval("obj."+name))=="object");
+						if(flag){
+							objstring+="\""+name+"\":{"+j8_showobj(eval("obj."+name),shengdu+1)+"}";
+						}else{
+							objstring+="\""+name+"\":\""+(eval("obj."+name)+'').replace(/\"/g,"\\\"")+"\"";
+						}
+					}catch(e){
+						objstring+="\""+name+"\":\"\"";
+						alert("属性名称:"+name+";错误信息:"+e);
+					}
+					break;
+				}
+				var first=true;
+				for(var name in obj){
+					if(first){
+						first=false;
+						continue;
+					}
+					if(num++>100){//最多显示一个对象的100个属性
+						break;
+					}
+					try{
+						var flag=(typeof(eval("obj."+name))=="object");
+						if(flag){
+							objstring+=",\""+name+"\":{"+j8_showobj(eval("obj."+name),shengdu+1)+"}";
+						}else{
+							objstring+=",\""+name+"\":\""+(eval("obj."+name)+'').replace(/\"/g,"\\\"")+"\"";
+						}
+					}catch(e){
+						objstring+=",\""+name+"\":\"\"";
+						alert("属性名称:"+name+";错误信息:"+e);
+					}
+				}
+			}
+			if(isarray){
+				msg+="["+arrstring+"]";
+			}else{
+				msg+=objstring;
+			}
+			
+			if(isarray){
+				return msg;
+			}else{
+				if(shengdu==1){
+					return "{"+msg+"}";
+				}
+				return msg;
+			}
+		}
+		//判断是否为数组
+		function isArray(obj){
+			return Object.prototype.toString.call(obj)==='[object Array]';
+		}
+
+10 判断对象是否为数组
+		//判断是否为数组
+		function isArray(obj){
+			return Object.prototype.toString.call(obj)==='[object Array]';
+		}
+
+11 课题：js对象类型
+	1）基础知识:js对象的类型
+
+	2）如何判断js对象:常用对象类型判断方法及优缺点
+
+12 MyEclipse Html编辑器
+	Open With---MyEclipse Visual Designer---既有文本编辑页面，也有网页视图界面
+
+13 王文快捕编译成exe可以保持自己添加的书签跳转功能，编译成chm则不能保持
+
+14 用于显示文本的div样式
+	参考页面:dutypcplan_frame.jsp
+		<div id="hdtsk" style="text-align:center;position:absolute;top:100px;left:200px;width:900px;height:400px;background:white;">
+			<div style="width:100%;height:5%;text-align:right;background-color:#efefef;" >
+				<a href="javascript:void(0)" onclick="hidenode('hdtsk')" style="text-decoration:none">关闭</a>
+			</div>
+			<div id="hdtsk_title" style="width:100%;height:5%;">活动冲突提示框</div>
+			<div id="hdtsk_body" style="width:99.8%;height:88%;overflow-x:auto;">
+				<div id="hdtsk_time" style="text-align:left;width:99%;height:97%;WORD-BREAK: break-all;word-wrap:break-word;overflow-y:auto;"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				document.getElementById("hdtsk").style.border="solid 2 red";
+				document.getElementById("hdtsk_title").style.border="solid 0 red";
+				document.getElementById("hdtsk_body").style.border="solid 2 red";
+				document.getElementById("hdtsk_time").style.border="solid 4 yellow";
+			});
+			function hidenode(objid){
+				document.getElementById(objid).style.display="none";
+			}
+		</script>
+
+15 编程技巧
+		1）前台嵌套iframe时，将所有的iframe对象都注册到主页面的资源中
+		2）测试模式：参考常委活动安排
+
+16 可以动div层
+<div id="jelle_test_div" style="border: 1px solid #CCC; position: absolute; width: 200px; height: 100px; cursor: move;">这个DIV可以移动，你可以测试下。</div>
+<script type="text/javascript">
+// <![CDATA[
+var $j=function(id){return document.getElementById(id);};
+var getMouseP=function (e){
+	//获取鼠标坐标 请传递evnet参数
+	e = e || window.event;
+	var m=(e.pageX || e.pageY)?{ x:e.pageX, y:e.pageY } : { x:e.clientX + document.body.scrollLeft - document.body.clientLeft, y:e.clientY + document.body.scrollTop  - document.body.clientTop };
+	return m;
+};
+    
+move=function(o,t){
+	o=$j(o);
+	t=$j(t);
+	o.onmousedown=function(ev){
+		var mxy=getMouseP(ev);//获取当前鼠标坐标
+		var by={x:mxy.x-(t.offsetLeft),y:mxy.y-(t.offsetTop)};
+		o.style.cursor="move";
+		document.onmousemove=function(ev){
+			var mxy=getMouseP(ev);
+			t.style.left=mxy.x-by.x+"px";
+			t.style.top=mxy.y-by.y+"px";
+		};
+		document.onmouseup=function(){
+			window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+			this.onmousemove=null;
+		}
+	}
+}
+move("jelle_test_div","jelle_test_div");
+// ]]>
+</script>
+
+17 如何确定网页中某一个js方法的来源
+	网页中js方法可能来源js文件、jsp文件、java文件、数据库记录等，一般的来源就是前面三个
+	
+	如果前台  <a onclick="func();">test</a>
+
+	则只要利用开发模式修改onclick="alert(func);func()"既可以看到func方法的内容了，然后根据某些特殊字符串去查询
+
+18 获取用户当前登录系统的连接池unid
+	参考AppFileBusiness.java
+		String app_unid = request.getParameter("app_unid");
+		if(StrUtil.isNull(app_unid)){
+			Session ucapSession = (Session) request.getSession().getAttribute(Session.SESSION_NAME);
+			app_unid = ucapSession.getApp().getUnid();
+		}
+		this.fileManager = new AppFileManager(app_unid);
+
+19 java模仿js的replace(str,function)方法
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import com.linewell.ucap.platform.authorized.app.App;
+import com.linewell.ucap.platform.cache.dept.Dept;
+import com.linewell.ucap.platform.cache.dept.DeptManager;
+import com.linewell.ucap.platform.cache.user.User;
+import com.linewell.ucap.resource.ManageException;
+import com.linewell.ucap.session.Session;
+import com.sybase.jdbc3.a.b.m;
+
+	public static void main(String[] args) {
+		String str="#{user_name} and #{user_age}";
+		Pattern pattern=Pattern.compile("\\#\\{([a-z]|_)*\\}");
+		Matcher m = pattern.matcher(str);
+		while(m.find()){
+			System.out.println(m.group(0)+m.groupCount()+m.group());
+			str=str.replace(m.group(0),m.group(0).substring(2,m.group(0).length()-1));
+		}
+		System.out.println(str);
+	}
+
+rem -------------------------------html end
+rem -------------------------------公司
+1 获取当前登陆用户
+	//获取当前系统用户
+	Session ucapsession = (Session) request.getSession().getAttribute(Session.SESSION_NAME);
+	String username=ucapsession.getUser().getDisplayName();
+	String userid=ucapsession.getUser().getUnid();
+
+2 问题
+	视图配置中可以使用SQL默认参数，默认参数是在什么时候设置为对应的值得？
+
+2 服务器ip
+59.61.216.123
+rem -------------------------------公司 end
+rem -------------------------------其它
+1 编程的DEMO，一般是开发一个功能块之前，写一些简章的代码来实现功能，不需要可移植，可扩展，安全等要求，简简单单的一个实现，然后正式的开发围绕丰富它而进行。
+rem -------------------------------其它 end

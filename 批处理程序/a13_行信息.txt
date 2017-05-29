@@ -1,0 +1,15 @@
+23:call :main
+30:call a\a38_pathCopy.bat D41_clear_folder D41_clear_folder
+34:	call :D41_delete
+39:call a\a38_pathCopy.bat D41_deleteFile D41_deleteFile
+40:rem call a\a37_pathCheck.bat D41_deleteFile.truePathWithoutYh D41_pathExist
+41:rem call a\a37_pathCheck.bat D41_deleteFile.truePathWithoutYh D41_pathExist
+42:call a\a37_pathCheck.bat D41_deleteFile.showPathWithYh D41_pathExist
+125:rem 利用call的双重扩展变量的特性实现只需要将变量名作为参数传入就可以取得变量值，优点是简化代码书写，缺点是效率较低(call会进行两次变量扩展)，如果要提高效率，可以参考本文件最后的例子
+128:rem call-后面的代码以上的扩展过程会进行两次
+135:call :a38_varcopy "%%%a38_source.name%:"=" "%%"
+136:call :a38_varcopy2 "%%%a38_source.name%:"=" "%%"
+138:call a\a33_clearvar.bat a38_ 1
+233:call a\a38_pathCopy.bat %1 a37_source
+235:call :a37_main
+236:call a\a33_clearvar.bat a37_ 1

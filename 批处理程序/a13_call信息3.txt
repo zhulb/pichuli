@@ -1,0 +1,3 @@
+a\a38_pathCopy.bat a38
+a\a37_pathCheck.bat a37
+a\a33_clearvar.bat a33

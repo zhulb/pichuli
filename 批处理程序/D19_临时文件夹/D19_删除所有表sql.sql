@@ -1,0 +1,2 @@
+conn zjdms/zjdms;
+exit;

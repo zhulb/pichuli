@@ -1,0 +1,338 @@
+<title></title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #7C00F9}
+.STYLE2 {color: #FF00FF}
+.STYLE3 {color: #00FFFF}
+.STYLE4 {color: #EE2B92; }
+.STYLE5 {color: #CCCC33}
+.STYLE6 {color: #FF8000}
+.STYLE7 {color: #00FF00}
+.STYLE8 {
+	color: #FF0000;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 24px;
+}
+.STYLE9 {
+	color:#0000FF;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 34px;
+}
+-->
+</style>
+</head>
+
+<body>
+</p><a name="返回首页" class="STYLE9">首页</a></p>
+<p class="STYLE9">一、html</p>
+<p><span class="STYLE4">1,</span><a href="#a标签去除下划线" class="STYLE4">a标签去除下划线</a></p>
+<p><span class="STYLE6">2,</span><a href="#输出消息框" class="STYLE6">输出消息框</a></p>
+<p><span class="STYLE4">3,</span><a href="#duty数据库结构" class="STYLE4">duty数据库结构</a></p>
+<p><span class="STYLE1">4,</span><a href="#js对象转为JSON字符串" class="STYLE1">js对象转为JSON字符串</a></p>
+<p><span class="STYLE2">5,</span><a href="#页面加载完执行js" class="STYLE2">页面加载完执行js</a></p>
+<p><span class="STYLE4">6,</span><a href="#js中startWith和endWith方法" class="STYLE4">js中startWith和endWith方法</a></p>
+<p><span class="STYLE4">7,</span><a href="#display取值" class="STYLE4">display取值</a></p>
+<p><span class="STYLE1">8,</span><a href="#div自动换行样式" class="STYLE1">div自动换行样式</a></p>
+<p><span class="STYLE2">9,</span><a href="#js对象、数组显示工具" class="STYLE2">js对象、数组显示工具</a></p>
+<p><span class="STYLE6">10,</span><a href="#判断对象是否为数组" class="STYLE6">判断对象是否为数组</a></p>
+<p><span class="STYLE4">11,</span><a href="#课题：js对象类型" class="STYLE4">课题：js对象类型</a></p>
+<p><span class="STYLE1">12,</span><a href="#MyEclipse" class="STYLE1">MyEclipse</a></p>
+<p><span class="STYLE2">13,</span><a href="#王文快捕编译成exe可以保持自己添加的书签跳转功能，编译成chm则不能保持" class="STYLE2">王文快捕编译成exe可以保持自己添加的书签跳转功能，编译成chm则不能保持</a></p>
+<p><span class="STYLE2">14,</span><a href="#用于显示文本的div样式" class="STYLE2">用于显示文本的div样式</a></p>
+<p><span class="STYLE2">15,</span><a href="#编程技巧" class="STYLE2">编程技巧</a></p>
+<p><span class="STYLE4">16,</span><a href="#可以动div层" class="STYLE4">可以动div层</a></p>
+<p><span class="STYLE6">17,</span><a href="#如何确定网页中某一个js方法的来源" class="STYLE6">如何确定网页中某一个js方法的来源</a></p>
+<p><span class="STYLE4">18,</span><a href="#获取用户当前登录系统的连接池unid" class="STYLE4">获取用户当前登录系统的连接池unid</a></p>
+<p><span class="STYLE2">19,</span><a href="#java模仿js的replace(str" class="STYLE2">java模仿js的replace(str</a></p>
+<p class="STYLE9">二、公司</p>
+<p><span class="STYLE1">1,</span><a href="#获取当前登陆用户" class="STYLE1">获取当前登陆用户</a></p>
+<p><span class="STYLE3">2,</span><a href="#问题" class="STYLE3">问题</a></p>
+<p class="STYLE9">三、其它</p>
+<p><span class="STYLE6">1,</span><a href="#编程的DEMO，一般是开发一个功能块之前，写一些简章的代码来实现功能，不需要可移植，可扩展，安全等要求，简简单单的一个实现，然后正式的开发围绕丰富它而进行。" class="STYLE6">编程的DEMO，一般是开发一个功能块之前，写一些简章的代码来实现功能，不需要可移植，可扩展，安全等要求，简简单单的一个实现，然后正式的开发围绕丰富它而进行。</a></p>
+<p class="STYLE9">一、html</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">1,</span><a name="#a标签去除下划线" class="STYLE4">a标签去除下划线</a></p>
+<p>	text-decoration:none 无下划线</p>
+<p>	text-decoration:underline 有下划线</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">2,</span><a name="#输出消息框" class="STYLE4">输出消息框</a></p>
+<p>	top.lwin.alert('消息',xxxx,'info');</p>
+<p>	或者</p>
+<p>	top.$.messager.alert('消息',xxxx,'info');</p>
+<p>	换行操作</p>
+<p>	top.lwin.alert('消息',xxxx</br>xxxx,'info');</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">3,</span><a name="#duty数据库结构" class="STYLE4">duty数据库结构</a></p>
+<p>	领导人员表：duty_lead_participant</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE5">4,</span><a name="#js对象转为JSON字符串" class="STYLE5">js对象转为JSON字符串</a></p>
+<p>	JSON.stringify(obj)</p>
+<p>	用这个也可以显示一个对象的所有属性值</p>
+<p>	注意：依赖json.js文件</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE7">5,</span><a name="#页面加载完执行js" class="STYLE7">页面加载完执行js</a></p>
+<p>	1）$(function(){})</p>
+<p>	2）<body onload="..."></p>
+<p>	3）window.onload=...  当有FrameSet时(FrameSet和body不能同时)</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">6,</span><a name="#js中startWith和endWith方法" class="STYLE4">js中startWith和endWith方法</a></p>
+<p>	添加代码</p>
+<p>	String.prototype.startWith=function(str){     </p>
+<p>	  var reg=new RegExp("^"+str);     </p>
+<p>	  return reg.test(this);        </p>
+<p>	}  </p>
+<p>	 </p>
+<p>	String.prototype.endWith=function(str){     </p>
+<p>	  var reg=new RegExp(str+"$");     </p>
+<p>	  return reg.test(this);        </p>
+<p>	}</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE3">7,</span><a name="#display取值" class="STYLE3">display取值</a></p>
+<p>	none:隐藏</p>
+<p>	block:显示</p>
+<p>	table:</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE5">8,</span><a name="#div自动换行样式" class="STYLE5">div自动换行样式</a></p>
+<p>	WORD-BREAK: break-all;word-wrap:break-word;</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE6">9,</span><a name="#js对象、数组显示工具" class="STYLE6">js对象、数组显示工具</a></p>
+<p>		//js对象显示工具---转换为json字符串</p>
+<p>		//和JSON.stringify()方法的区别：保留了中文，而JSON.stringify()方法会将中文转换为\uxxx的形式</p>
+<p>		//</p>
+<p>		//参数:</p>
+<p>		//obj:js对象或者数组</p>
+<p>		//shengdu:不用赋值，用于避免“无限”递归</p>
+<p>		//</p>
+<p>		//返回值：json数据(有转意双引号)</p>
+<p>		//</p>
+<p>		//注意：可以利用返回的json数据直接定义js对象</p>
+<p>		//如：</p>
+<p>		//var a=eval('('+j8_showobj(cwhdlist)+')');</p>
+<p>		////或者eval("var a="+j8_showobj(cwhdlist)+";");</p>
+<p>		//alert(a[0].end_date);</p>
+<p>		function j8_showobj(obj,shengdu){</p>
+<p>			shengdu=typeof(shengdu)=='undefined'?1:shengdu;</p>
+<p>			var num=0;</p>
+<p>			if(shengdu>5)return "";</p>
+<p>			var msg='';</p>
+<p>			//判断对象是否为数组</p>
+<p>			var isarray=isArray(obj);</p>
+<p>			//获取数组字符串</p>
+<p>			var arrstring='';</p>
+<p>			if(isarray){</p>
+<p>				try{//有些对象也有length属性</p>
+<p>					if(obj.length>0){</p>
+<p>						var type=typeof(obj[0]);</p>
+<p>						if(type=='string'||type=='number'||type=='boolean'||type=='undefined'){</p>
+<p>							arrstring+="\""+obj[0]+"\"";</p>
+<p>						}else{</p>
+<p>							arrstring+="{"+j8_showobj(obj[0],shengdu+1)+"}\n\n";</p>
+<p>						}</p>
+<p>					}</p>
+<p>					for(var i=1;i<obj.length;i++){</p>
+<p>						if(i>100){//最多显示一个数组的100个元素</p>
+<p>							break;</p>
+<p>						}</p>
+<p>						var type=typeof(obj[i]);</p>
+<p>						if(type=='string'||type=='number'||type=='boolean'||type=='undefined'){</p>
+<p>							arrstring+=",\""+obj[i]+"\"";</p>
+<p>						}else{</p>
+<p>							arrstring+=",{"+j8_showobj(obj[i],shengdu+1)+"}\n\n";</p>
+<p>						}</p>
+<p>					}</p>
+<p>				}catch(e){</p>
+<p>					isarray=false;</p>
+<p>				}</p>
+<p>			}</p>
+<p>			//不是数组时获取对象字符串</p>
+<p>			var objstring='';</p>
+<p>			if(!isarray){</p>
+<p>				for(var name in obj){</p>
+<p>					if(num++>100){//最多显示一个对象的100个属性</p>
+<p>						break;</p>
+<p>					}</p>
+<p>					try{</p>
+<p>						var flag=(typeof(eval("obj."+name))=="object");</p>
+<p>						if(flag){</p>
+<p>							objstring+="\""+name+"\":{"+j8_showobj(eval("obj."+name),shengdu+1)+"}";</p>
+<p>						}else{</p>
+<p>							objstring+="\""+name+"\":\""+(eval("obj."+name)+'').replace(/\"/g,"\\\"")+"\"";</p>
+<p>						}</p>
+<p>					}catch(e){</p>
+<p>						objstring+="\""+name+"\":\"\"";</p>
+<p>						alert("属性名称:"+name+";错误信息:"+e);</p>
+<p>					}</p>
+<p>					break;</p>
+<p>				}</p>
+<p>				var first=true;</p>
+<p>				for(var name in obj){</p>
+<p>					if(first){</p>
+<p>						first=false;</p>
+<p>						continue;</p>
+<p>					}</p>
+<p>					if(num++>100){//最多显示一个对象的100个属性</p>
+<p>						break;</p>
+<p>					}</p>
+<p>					try{</p>
+<p>						var flag=(typeof(eval("obj."+name))=="object");</p>
+<p>						if(flag){</p>
+<p>							objstring+=",\""+name+"\":{"+j8_showobj(eval("obj."+name),shengdu+1)+"}";</p>
+<p>						}else{</p>
+<p>							objstring+=",\""+name+"\":\""+(eval("obj."+name)+'').replace(/\"/g,"\\\"")+"\"";</p>
+<p>						}</p>
+<p>					}catch(e){</p>
+<p>						objstring+=",\""+name+"\":\"\"";</p>
+<p>						alert("属性名称:"+name+";错误信息:"+e);</p>
+<p>					}</p>
+<p>				}</p>
+<p>			}</p>
+<p>			if(isarray){</p>
+<p>				msg+="["+arrstring+"]";</p>
+<p>			}else{</p>
+<p>				msg+=objstring;</p>
+<p>			}</p>
+<p>			</p>
+<p>			if(isarray){</p>
+<p>				return msg;</p>
+<p>			}else{</p>
+<p>				if(shengdu==1){</p>
+<p>					return "{"+msg+"}";</p>
+<p>				}</p>
+<p>				return msg;</p>
+<p>			}</p>
+<p>		}</p>
+<p>		//判断是否为数组</p>
+<p>		function isArray(obj){</p>
+<p>			return Object.prototype.toString.call(obj)==='[object Array]';</p>
+<p>		}</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE6">10,</span><a name="#判断对象是否为数组" class="STYLE6">判断对象是否为数组</a></p>
+<p>		//判断是否为数组</p>
+<p>		function isArray(obj){</p>
+<p>			return Object.prototype.toString.call(obj)==='[object Array]';</p>
+<p>		}</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">11,</span><a name="#课题：js对象类型" class="STYLE4">课题：js对象类型</a></p>
+<p>	1）基础知识:js对象的类型</p>
+<p>	2）如何判断js对象:常用对象类型判断方法及优缺点</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE1">12,</span><a name="#MyEclipse" class="STYLE1">MyEclipse</a></p>
+<p>	Open With---MyEclipse Visual Designer---既有文本编辑页面，也有网页视图界面</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE1">13,</span><a name="#王文快捕编译成exe可以保持自己添加的书签跳转功能，编译成chm则不能保持" class="STYLE1">王文快捕编译成exe可以保持自己添加的书签跳转功能，编译成chm则不能保持</a></p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE2">14,</span><a name="#用于显示文本的div样式" class="STYLE2">用于显示文本的div样式</a></p>
+<p>	参考页面:dutypcplan_frame.jsp</p>
+<p>		<div id="hdtsk" style="text-align:center;position:absolute;top:100px;left:200px;width:900px;height:400px;background:white;"></p>
+<p>			<div style="width:100%;height:5%;text-align:right;background-color:#efefef;" ></p>
+<p>				<a href="javascript:void(0)" onclick="hidenode('hdtsk')" style="text-decoration:none">关闭</a></p>
+<p>			</div></p>
+<p>			<div id="hdtsk_title" style="width:100%;height:5%;">活动冲突提示框</div></p>
+<p>			<div id="hdtsk_body" style="width:99.8%;height:88%;overflow-x:auto;"></p>
+<p>				<div id="hdtsk_time" style="text-align:left;width:99%;height:97%;WORD-BREAK: break-all;word-wrap:break-word;overflow-y:auto;"></div></p>
+<p>			</div></p>
+<p>		</div></p>
+<p>		<script type="text/javascript"></p>
+<p>			$(function(){</p>
+<p>				document.getElementById("hdtsk").style.border="solid 2 red";</p>
+<p>				document.getElementById("hdtsk_title").style.border="solid 0 red";</p>
+<p>				document.getElementById("hdtsk_body").style.border="solid 2 red";</p>
+<p>				document.getElementById("hdtsk_time").style.border="solid 4 yellow";</p>
+<p>			});</p>
+<p>			function hidenode(objid){</p>
+<p>				document.getElementById(objid).style.display="none";</p>
+<p>			}</p>
+<p>		</script></p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE2">15,</span><a name="#编程技巧" class="STYLE2">编程技巧</a></p>
+<p>		1）前台嵌套iframe时，将所有的iframe对象都注册到主页面的资源中</p>
+<p>		2）测试模式：参考常委活动安排</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE3">16,</span><a name="#可以动div层" class="STYLE3">可以动div层</a></p>
+<p><div id="jelle_test_div" style="border: 1px solid #CCC; position: absolute; width: 200px; height: 100px; cursor: move;">这个DIV可以移动，你可以测试下。</div></p>
+<p><script type="text/javascript"></p>
+<p>// <![CDATA[</p>
+<p>var $j=function(id){return document.getElementById(id);};</p>
+<p>var getMouseP=function (e){</p>
+<p>	//获取鼠标坐标 请传递evnet参数</p>
+<p>	e = e || window.event;</p>
+<p>	var m=(e.pageX || e.pageY)?{ x:e.pageX, y:e.pageY } : { x:e.clientX + document.body.scrollLeft - document.body.clientLeft, y:e.clientY + document.body.scrollTop  - document.body.clientTop };</p>
+<p>	return m;</p>
+<p>};</p>
+<p>move=function(o,t){</p>
+<p>move=function(o,t){</p>
+<p>	o=$j(o);</p>
+<p>	t=$j(t);</p>
+<p>	o.onmousedown=function(ev){</p>
+<p>		var mxy=getMouseP(ev);//获取当前鼠标坐标</p>
+<p>		var by={x:mxy.x-(t.offsetLeft),y:mxy.y-(t.offsetTop)};</p>
+<p>		o.style.cursor="move";</p>
+<p>		document.onmousemove=function(ev){</p>
+<p>			var mxy=getMouseP(ev);</p>
+<p>			t.style.left=mxy.x-by.x+"px";</p>
+<p>			t.style.top=mxy.y-by.y+"px";</p>
+<p>		};</p>
+<p>		document.onmouseup=function(){</p>
+<p>			window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();</p>
+<p>			this.onmousemove=null;</p>
+<p>		}</p>
+<p>	}</p>
+<p>}</p>
+<p>move("jelle_test_div","jelle_test_div");</p>
+<p>// ]]></p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE7">17,</span><a name="#如何确定网页中某一个js方法的来源" class="STYLE7">如何确定网页中某一个js方法的来源</a></p>
+<p>17 如何确定网页中某一个js方法的来源</p>
+<p>	网页中js方法可能来源js文件、jsp文件、java文件、数据库记录等，一般的来源就是前面三个</p>
+<p>	</p>
+<p>	如果前台  <a onclick="func();">test</a></p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">18,</span><a name="#获取用户当前登录系统的连接池unid" class="STYLE4">获取用户当前登录系统的连接池unid</a></p>
+<p>18 获取用户当前登录系统的连接池unid</p>
+<p>	参考AppFileBusiness.java</p>
+<p>		String app_unid = request.getParameter("app_unid");</p>
+<p>		if(StrUtil.isNull(app_unid)){</p>
+<p>			Session ucapSession = (Session) request.getSession().getAttribute(Session.SESSION_NAME);</p>
+<p>			app_unid = ucapSession.getApp().getUnid();</p>
+<p>		}</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE3">19,</span><a name="#java模仿js的replace(str" class="STYLE3">java模仿js的replace(str</a></p>
+<p>19 java模仿js的replace(str,function)方法</p>
+<p>import java.util.regex.Matcher;</p>
+<p>import java.util.regex.Pattern;</p>
+<p>import javax.servlet.http.HttpServletRequest;</p>
+<p>import org.apache.commons.logging.Log;</p>
+<p>import org.apache.commons.logging.LogFactory;</p>
+<p>import com.linewell.ucap.platform.authorized.app.App;</p>
+<p>import com.linewell.ucap.platform.cache.dept.Dept;</p>
+<p>import com.linewell.ucap.platform.cache.dept.DeptManager;</p>
+<p>import com.linewell.ucap.platform.cache.user.User;</p>
+<p>import com.linewell.ucap.resource.ManageException;</p>
+<p>import com.linewell.ucap.session.Session;</p>
+<p>import com.sybase.jdbc3.a.b.m;</p>
+<p>	public static void main(String[] args) {</p>
+<p>		String str="#{user_name} and #{user_age}";</p>
+<p>		Pattern pattern=Pattern.compile("\\#\\{([a-z]|_)*\\}");</p>
+<p>		Matcher m = pattern.matcher(str);</p>
+<p>		while(m.find()){</p>
+<p>			System.out.println(m.group(0)+m.groupCount()+m.group());</p>
+<p>			str=str.replace(m.group(0),m.group(0).substring(2,m.group(0).length()-1));</p>
+<p>		}</p>
+<p>		System.out.println(str);</p>
+<p class="STYLE9">二、公司</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">1,</span><a name="#获取当前登陆用户" class="STYLE4">获取当前登陆用户</a></p>
+<p>1 获取当前登陆用户</p>
+<p>	//获取当前系统用户</p>
+<p>	Session ucapsession = (Session) request.getSession().getAttribute(Session.SESSION_NAME);</p>
+<p>	String username=ucapsession.getUser().getDisplayName();</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE7">2,</span><a name="#问题" class="STYLE7">问题</a></p>
+<p>2 问题</p>
+<p>	视图配置中可以使用SQL默认参数，默认参数是在什么时候设置为对应的值得？</p>
+<p>2 服务器ip</p>
+<p class="STYLE9">三、其它</p>
+<p><a href="#返回首页" class="STYLE8">返回首页</a></p>
+<p><span class="STYLE4">1,</span><a name="#编程的DEMO，一般是开发一个功能块之前，写一些简章的代码来实现功能，不需要可移植，可扩展，安全等要求，简简单单的一个实现，然后正式的开发围绕丰富它而进行。" class="STYLE4">编程的DEMO，一般是开发一个功能块之前，写一些简章的代码来实现功能，不需要可移植，可扩展，安全等要求，简简单单的一个实现，然后正式的开发围绕丰富它而进行。</a></p>

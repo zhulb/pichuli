@@ -1,0 +1,45 @@
+卷 办公 的文件夹 PATH 列表
+卷序列号码为 0006EEA4 046D:B7C4
+F:.
+│  IE修复.cmd
+│  Windows安全优化小助手.cmd
+│  删除历史记录.bat
+│  删除右键“新建”菜单项目.bat
+│  删除默认共享.bat
+│  多功能系统优化设置.cmd
+│  系统补丁自动升级.cmd
+│  系统补丁自动安装.cmd
+│  复件 系统补丁自动安装.cmd
+│  test.txt
+│  
+├─C盘个人资料转移器
+│  │  SHELL.PIF
+│  │  Shell.reg
+│  │  简介.txt
+│  │  
+│  ├─Desktop
+│  ├─Favorites
+│  ├─My Documents
+│  ├─OE
+│  └─Temp
+├─XP安全设置补丁批处理
+│      svc2kxp深山红叶汉化版本.cmd
+│      介绍.txt
+│      
+├─XP自动优化批处理文件3.0
+│      lmod.com
+│      OptimizeXp.bat
+│      
+├─全盘禁止运行指定程序
+│      list.ini
+│      全盘禁止运行指定程序.cmd
+│      
+├─关闭无用的服务
+│      2003优化文件.bat
+│      XP优化文件.bat
+│      
+└─快速清理垃圾文件安装修改版
+        Deltmp.bat
+        install.CMD
+        注册右键.reg
+        

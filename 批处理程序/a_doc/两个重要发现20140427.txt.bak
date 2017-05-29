@@ -1,0 +1,34 @@
+用代码来说明
+1、
+for /f "tokens=*" %%i in ('echo,yy^|findstr y') do (
+	echo,%%i
+)
+
+
+以及
+set a=^^^|
+for /f "tokens=*" %%i in ('echo,yy%a%findstr y') do (
+	echo,%%i
+)
+
+说明：
+for /f "tokens=*" %%i in ('代码') do ()
+表示将代码执行的结果作为for的读取源
+
+第一段说明'代码'内的代码中的特殊字符要转义,就像用set赋值时要转义一样
+第二段说明，这种转义与预编译无关
+
+2、for /f "delims=" %%i in ('findstr ".*" "a.txt"') do (
+	echo,%%i
+)
+
+这段代码主要用来去除文本中的空行，并且不会去除一行开头的空格、Tab健对应的字符
+注意的是不要把delims=换成tokens=*
+例子：
+@echo off
+for /f "delims=" %%i in ('findstr ".*" "test.txt"') do (
+	echo,!%%i!
+)
+pause
+cd.>t.txt
+echo,f>>t.txt
