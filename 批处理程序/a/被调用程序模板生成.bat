@@ -1,4 +1,7 @@
 @echo off
+set rem=echo,
+set pause=pause
+
 set pathly="%~0"
 for /l %%i in (1,1,100) do (
 if not exist a%%i_*.bat (
@@ -9,14 +12,16 @@ goto finish
 :finish
 echo,完成!
 ping /n 2 127.1>nul
+%pause%
 exit
 :main
 cd.>a%1_未命名.bat
 set act=
-for /f "usebackq tokens=*" %%i in (%pathly%) do (
+for /f "usebackq tokens=* delims=" %%i in (%pathly%) do (
 if "%%i"=="::模板 end" goto :eof
 if defined act (
->>a%1_未命名.bat echo,%%i
+	%rem% %%i
+	>>a%1_未命名.bat echo,%%i
 )
 if "%%i"=="::模板" set act=on
 )
@@ -27,6 +32,10 @@ if "%~2"=="" (
 echo,&echo,%%2参数为空!
 ping /n 2 127.1>nul
 goto exit
+)
+rem 默认不开启调试模式
+if "%rem%"=="" (
+	set rem=rem 
 )
   rem ■将文件拖到批处理时，批处理会运行，但%2参数为空，利用这点来判断批处理是"拖动文件到程序"的调用方式(故其它调用中%2参数必须不为空)
 ::主代码
